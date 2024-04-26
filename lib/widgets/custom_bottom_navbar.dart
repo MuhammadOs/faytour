@@ -34,7 +34,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
     return [
       PersistentBottomNavBarItem(
         icon: const Icon(Icons.home_outlined),
-        activeColorPrimary: Colors.blue,
+        activeColorPrimary: Colors.grey,
         activeColorSecondary: Colors.white,
         inactiveColorPrimary: Colors.grey,
         inactiveColorSecondary: Colors.purple,
@@ -47,14 +47,21 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
         inactiveColorSecondary: Colors.purple,
       ),
       PersistentBottomNavBarItem(
-        icon: const Icon(Icons.my_location),
+        icon: const Icon(Icons.add),
         activeColorPrimary: Colors.blue,
         activeColorSecondary: Colors.white,
         inactiveColorPrimary: Colors.grey,
         inactiveColorSecondary: Colors.purple,
       ),
       PersistentBottomNavBarItem(
-        icon: const Icon(Icons.add_circle_rounded),
+        icon: const Icon(Icons.location_on),
+        activeColorPrimary: Colors.blue,
+        activeColorSecondary: Colors.white,
+        inactiveColorPrimary: Colors.grey,
+        inactiveColorSecondary: Colors.purple,
+      ),
+      PersistentBottomNavBarItem(
+        icon: const Icon(Icons.list),
         activeColorPrimary: Colors.blue,
         activeColorSecondary: Colors.white,
         inactiveColorPrimary: Colors.grey,
@@ -62,13 +69,6 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
       ),
       PersistentBottomNavBarItem(
         icon: const Icon(Icons.favorite),
-        activeColorPrimary: Colors.blue,
-        activeColorSecondary: Colors.white,
-        inactiveColorPrimary: Colors.grey,
-        inactiveColorSecondary: Colors.purple,
-      ),
-      PersistentBottomNavBarItem(
-        icon: const Icon(Icons.menu),
         activeColorPrimary: Colors.blue,
         activeColorSecondary: Colors.white,
         inactiveColorPrimary: Colors.grey,
@@ -85,7 +85,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
         backgroundColor: Colors.white,
         leading: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8.0),
-          child: Image.asset("assits/images/fayoum_logo.png"),
+          child: Image.asset("assits/images/السواقي.jpg"),
         ),
         title: const Text("FayTour"),
         centerTitle: true,
@@ -108,7 +108,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
         stateManagement: false,
         navBarHeight: kBottomNavigationBarHeight,
         hideNavigationBarWhenKeyboardShows: true,
-        margin: EdgeInsets.all(0.0),
+        margin: EdgeInsets.all(2.0),
         popActionScreens: PopActionScreensType.all,
         bottomScreenMargin: 0.0,
         onWillPop: (context) async {
@@ -117,7 +117,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
             useSafeArea: true,
             builder: (context) => Container(
               height: 50.0,
-              width: 50.0,
+              width: 30.0,
               color: Colors.white,
               child: ElevatedButton(
                 child: Text("Close"),
@@ -130,7 +130,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
           return false;
         },
         decoration: NavBarDecoration(
-            colorBehindNavBar: Colors.indigo,
+            colorBehindNavBar: Colors.grey,
             borderRadius: BorderRadius.circular(20.0)),
         popAllScreensOnTapOfSelectedTab: true,
         itemAnimationProperties: const ItemAnimationProperties(

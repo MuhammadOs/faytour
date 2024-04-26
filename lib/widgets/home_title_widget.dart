@@ -11,11 +11,11 @@ class HomeTitleWidget extends StatelessWidget {
       children: [
         Text(
           title,
-          style: Theme.of(context).textTheme.titleLarge,
+          style: Theme.of(context).textTheme.titleMedium,
         ),
         TextButton(
           onPressed: () {},
-          child: const Text('See more'),
+          child: const Text('See more', style: TextStyle(color: Colors.grey),),
         ),
       ],
     );

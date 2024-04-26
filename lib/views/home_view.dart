@@ -43,6 +43,13 @@ class _HomeState extends State<Home> {
               _controller.value.isInitialized
                   ? VideoPlayer(_controller)
                   : const CircularProgressIndicator(),
+              ClipRRect(
+                borderRadius: const BorderRadius.all(Radius.circular(15.0)),
+                child: Image.network(
+                    "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/31/f1.jpg",
+                    fit: BoxFit.cover,
+                    width: 800.0),
+              ),
               SizedBox(height: 16.0),
               HomeTitleWidget(title: 'Recommendations'),
               CustomCarouselSlider(),
